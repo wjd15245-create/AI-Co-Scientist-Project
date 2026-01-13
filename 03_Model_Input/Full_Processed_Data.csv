@@ -1,0 +1,80 @@
+﻿Paper_ID,Pressure,O2_Flow,Temp,Method,Mobility,Stability,SS
+Xiao_2025,7.5,0.0,300.0,Sputtering,48.34,0.05,0.06
+Wen_2024,1.0,0.0,250.0,Sputtering,38.0,0.14,0.21
+Shima_2025,1.0,0.0,200.0,Sputtering,92.4,0.2,
+Su_2025,1.0,0.0,250.0,Sputtering,40.4,-7.4,
+Kim_2025_VTFT,5.0,40.0,300.0,Sputtering,18.41,0.7,0.4
+Shi_2024,0.4,0.25,150.0,Sputtering,20.0,0.14,
+Lee_2025,15.0,15.0,300.0,Sputtering,42.1,0.1,0.0822
+Kim_2024,5.0,10.0,300.0,Sputtering,39.82,0.86,0.24
+1_Lv_2025_Enhanced electrical stability of IGZO.pdf,1.0,0.0,400.0,Sputtering,11.61,-0.02,0.114
+2_Xiao_2025_Enhanced Carrier Transport and Stability.pdf,7.5,0.0,300.0,Sputtering,48.34,0.05,0.06
+3_Weldemhret_2025_Evaluation of the high mobility and stability.pdf,3.0,35.96,400.0,Sputtering,36.0,1.15,
+4_Lee_2022_Enhancement of the Electrical Performance.pdf,7.5,10.0,250.0,Sputtering,17.31,0.42,0.24
+5_Baek_2022_Vertical oxide thin-film transistor.pdf,5.0,23.07,400.0,Sputtering,0.29,0.1,0.2
+6_Su_2026_Performance enhancement of InSnZnO.pdf,0.1,3.23,275.0,Sputtering,50.51,1.0,0.59
+7_Lai_2025_Enhanced Mobility and Stability of Amorphous IZO.pdf,0.5,39.4,330.0,Sputtering,50.4,0.29,0.065
+8_Billah_2025_Multi-Channel Amorphous Oxide.pdf,1.0,0.0,400.0,Sputtering,67.1,0.94,0.11
+9_Lee_2022_Hydrogen-Doping-Enabled Boosting.pdf,2.0,0.0,400.0,Sputtering,85.9,0.42,
+10_Kim_2024_Improved mobility and bias stability.pdf,5.0,10.0,300.0,Sputtering,39.82,0.86,0.222
+pssa.202300544.pdf,7.5,10.0,260.0,Sputtering,16.69,22.3,0.22
+fmats.2025.1735405.pdf,1.0,0.0,400.0,Sputtering,11.66,-0.07,0.106
+apl.2024.133501.pdf,1.0,0.0,250.0,Sputtering,38.0,1.66,0.21
+mssp.2025.109879.pdf,10.0,2.0,250.0,Sputtering,37.3,0.21,
+jallcom.2021.162308.pdf,1.0,40.0,340.0,Sputtering,46.5,-3.8,0.22
+jos.2026.47.022304.pdf,1.0,0.0,330.0,Sputtering,13.24,1.7,4.87
+led.2023.3303867.pdf,1.0,0.0,330.0,Sputtering,7.08,4.8,
+Hwang_2025,1.0,21.0,550.0,Sputtering,1.12,4.6,3.77
+Park_2025,3.7e-08,0.0,300.0,Sputtering,134.0,0.3,0.039
+Choi_2025,1.0,100.0,500.0,Sputtering,3.13,1.6,1.32
+Park_2026,1.0,21.0,350.0,Sputtering,6.46,3.31,0.25
+Xiao_2025,7.5,0.0,300.0,Sputtering,48.34,0.05,
+Oh_2024,1.0,0.0,250.0,Sputtering,31.9,0.0,0.2
+Kim_2025_APSUSC,1.0,0.0,400.0,Sputtering,38.9,-0.199,0.07
+Son_2025,1.0,0.0,300.0,Sputtering,11.0,0.5,0.115
+Billah_2025,1.0,0.0,250.0,Sputtering,67.1,0.94,
+Shin_2026,5.0,1.64,200.0,Sputtering,28.0,0.12,0.15
+d3tc01379k.pdf,1.0,4.76,250.0,Sputtering,47.17,1.4,0.537
+apsusc.2024.161320.pdf,1.0,100.0,500.0,Sputtering,22.3,1.0,0.13
+d5tc01349f.pdf,1.0,21.0,550.0,Sputtering,16.43,7.2,0.374
+jiec.2024.05.046.pdf,760.0,0.0,400.0,Sputtering,45.7,0.63,0.095
+acsaelm.3c00431.pdf,1.0,10.0,450.0,Sputtering,8.2,5.61,0.208
+aelm.202400766.pdf,1.0,0.0,400.0,Sputtering,67.1,0.94,
+mssp.2025.109369.pdf,1.0,100.0,250.0,Sputtering,14.21,0.76,0.4
+acsami.4c06708.pdf,5.0,0.0,200.0,Sputtering,16.12,1.72,0.46
+vacuum.2023.112868.pdf,1.0,21.0,400.0,Sputtering,8.94,0.91,0.4
+Gherendi_2024_Micromachines_ZnO_Paper_Transistors,1.0,0.0,300.0,Sputtering,25.0,1.0,1.1
+Wen_2024_APL_IGO_IGZO,1.0,21.0,250.0,Sputtering,38.0,0.14,0.21
+Ryu_2025_APSUSC_ZnSnO,1.0,21.0,500.0,Sputtering,22.3,1.0,0.13
+Wei_2025_MSSP_ZnSnAlO,1.0,21.0,250.0,Sputtering,14.21,0.76,0.4
+Zhang_2024_MicroNano_IGTO_IGZO,2.0,0.0,250.0,Sputtering,17.25,1.0,0.67
+Zhu_2023_JCP_Hf_In2O3,1.0,21.0,250.0,Sputtering,13.4,0.28,
+Choi_2025_Low-temperature hybrid microwave annealing,4.0,0.0,200.0,Sputtering,30.75,2.97,0.33
+Yoon_2014_Study of Nitrogen High-Pressure Annealing,1.0,0.0,200.0,Sputtering,8.82,4.5,0.33
+Chen_2025_Ultra-low temperature ozone annealing,4.0,0.0,75.0,Sputtering,4.2,1.5,0.14
+Thazin_2025_Solid-State Laser Annealing,1.0,0.0,300.0,Sputtering,0.98,1.0,
+Yoo_2023_High-pressure H2O post-annealing,1.0,0.0,150.0,Sputtering,12.0,0.43,0.11
+Kim_2023_Atomic layer deposition for nanoscale,1.0,0.0,225.0,Sputtering,113.0,1.0,0.15
+Oh_2023_Influence of Channel Surface with Ozone Annealing,0.67,10.0,350.0,Sputtering,5.7,1.0,
+Oh_2025_Impact of atomic layer deposition supercycle,0.76,0.0,420.0,Sputtering,47.4,-0.67,0.22
+Perumallapelli_2025_Scalable Solution-Processed a-InZnSnO,1.0,0.0,300.0,Sputtering,15.69,0.1,0.103
+Lee_2025_Enabling low-temperature processing of amorphous SiZnSnO,12.0,0.0,350.0,Sputtering,15.22,2.01,
+Ren_2022_JPhysD_SnOx,1.0,0.0,350.0,Sputtering,5.57,1.0,0.57
+Xu_2014_APL_IGZO,10.0,21.0,100.0,Sputtering,2.8,1.0,0.3
+Kim_2025_MSSP_IGTO,0.003,50.0,180.0,Sputtering,17.93,3.7,0.18
+Wang_2024_ApSurfSci_In2O3,1.0,0.0,250.0,Sputtering,5.06,9.1,0.3
+Sheng_2016_ACSAMI_IZO,1.0,0.0,200.0,Sputtering,42.1,1.0,
+Liu_2025_ACSAMI_ZnO,1.0,0.0,150.0,Sputtering,16.6,0.5,0.14
+Hanifah_2023_ACSAEM_IZO,5.0,0.0,300.0,Sputtering,31.12,-0.3,0.22
+Kil_2024_IEEE_PolySi,10.0,0.0,300.0,Sputtering,44.6,0.92,1.22
+Lu_2023,7.52,28.6,300.0,Sputtering,113.8,1.0,0.372
+Wen_2024_apl-124-133501,1.0,0.0,250.0,Sputtering,38.0,0.14,0.21
+Welk_2022_PhysRevApplied.17.024007,1.0,0.0,300.0,Sputtering,30.0,1.0,
+Jeon_2010_DeAOTS_Thesis,1.0,0.99,250.0,Sputtering,23.5,1.0,0.792
+Yoo_2024_aelm.202300906,0.007,13.6,400.0,Sputtering,8.0,1.0,1.1
+Yoon_2023_micromachines-14-01596-v2,1.0,0.0,300.0,Sputtering,3.5,1.0,0.1
+Kim_2012_ACS_Appl_Mater_Interfaces,1.0,0.0,250.0,Sputtering,48.0,-1.18,
+Zhang_2024_Appl_Phys_Rev,10.0,0.0,450.0,Sputtering,31.0,1.0,1.17
+Wen_2024_Appl_Phys_Lett,1.0,0.0,250.0,Sputtering,38.0,1.66,0.21
+Jeon_2010_Thesis_Kookmin_Univ,1.0,0.99,250.0,Sputtering,23.5,1.0,0.792
+Lu_2023_J_Semicond,1.5,28.6,900.0,Sputtering,113.8,1.0,0.372

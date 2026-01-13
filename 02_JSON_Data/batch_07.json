@@ -1,0 +1,276 @@
+[
+  {
+    "Paper_ID": "Choi_2025_Low-temperature hybrid microwave annealing",
+    "Material_Data": {
+      "Composition_Ratio": "In2O3:WO3 = 99:1 wt.%",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 200,
+      "Deposition_Pressure": "4 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 30.75,
+      "Vth": null,
+      "SS": 0.33,
+      "PBTS_Shift": "2.97V @ 10000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Hybrid Microwave Annealing (h-MWA) -> Rapid, uniform volumetric heating -> Efficient defect passivation and reduction of oxygen-related defects -> Enhanced mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Vth"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Yoon_2014_Study of Nitrogen High-Pressure Annealing",
+    "Material_Data": {
+      "Composition_Ratio": "InO2:Ga2O3:ZnO = 2:2:1 mol %",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 200,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 8.82,
+      "Vth": 0.67,
+      "SS": 0.33,
+      "PBTS_Shift": "4.50V @ 15000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Nitrogen High-Pressure Annealing (HPA) -> Structural relaxation -> Increased carrier concentration, decreased deep-level defects and oxygen vacancies -> Improved mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Chen_2025_Ultra-low temperature ozone annealing",
+    "Material_Data": {
+      "Composition_Ratio": "In2O3:Ga2O3:ZnO = 1:1:1 mol.%",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 75,
+      "Deposition_Pressure": "4 Pa, then 8 Pa"
+    },
+    "Performance_Data": {
+      "Mobility": 4.2,
+      "Vth": 0.7,
+      "SS": 0.14,
+      "PBTS_Shift": "1.5V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Ozone (O3) annealing at 75°C -> O3 decomposition into atomic oxygen -> Passivation of interface defects (dangling bonds) and reduction of bulk oxygen vacancies -> Reduced Subthreshold Swing (SS) and improved stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "Thazin_2025_Solid-State Laser Annealing",
+    "Material_Data": {
+      "Composition_Ratio": "In:Zn = 77:23",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 300,
+      "Deposition_Pressure": "Not Applicable (Solution Process)"
+    },
+    "Performance_Data": {
+      "Mobility": 0.98,
+      "Vth": 0.4,
+      "SS": null,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "Solid-State Laser Annealing (SLA) -> Breaks weak metal-oxide bonds to form oxygen vacancies (Vo) and induces film densification -> Increased carrier concentration and improved carrier pathway -> Enables transistor switching"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "SS",
+        "PBTS_Shift"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Yoo_2023_High-pressure H2O post-annealing",
+    "Material_Data": {
+      "Composition_Ratio": "In:Ga:Zn:O = 1:1:1:4 atomic ratio",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 150,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 12,
+      "Vth": 1.1,
+      "SS": 0.11,
+      "PBTS_Shift": "0.43V @ 4000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "High-Pressure H2O Post-Annealing (H2O HPPA) -> Oxygen and Hydrogen penetrate film -> Passivation of metal ions, oxygen vacancies, and M-OH bonds -> Reduced interface trap states -> Improved uniformity and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage (numeric value)",
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Kim_2023_Atomic layer deposition for nanoscale",
+    "Material_Data": {
+      "Composition_Ratio": "In2O3",
+      "Structure": null
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 225,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 113,
+      "Vth": -1,
+      "SS": 0.15,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "Atomic Layer Deposition (ALD) using H2O -> Formation of dense, high-quality In2O3 film with low impurities -> Superior orbital overlap and low scattering -> High mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Structure",
+        "PBTS_Shift",
+        "Anneal_Temp_C (post-deposition)"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Oh_2023_Influence of Channel Surface with Ozone Annealing",
+    "Material_Data": {
+      "Composition_Ratio": "In:Ga:Zn = 1:1:1 atomic%",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 10,
+      "Anneal_Temp_C": 350,
+      "Deposition_Pressure": "0.67 Pa"
+    },
+    "Performance_Data": {
+      "Mobility": 5.7,
+      "Vth": 0,
+      "SS": null,
+      "PBTS_Shift": "1.0V @ 10000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Wet process damage (PR/Stripper) -> O3 Annealing + UV irradiation -> Removes organic contamination and repairs surface O-related defects (Vo, Oi) -> Restored electrical performance and reliability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "SS"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Oh_2025_Impact of atomic layer deposition supercycle",
+    "Material_Data": {
+      "Composition_Ratio": "In:Ga:Zn = 69:7:24 at.%",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 420,
+      "Deposition_Pressure": "0.76 Torr"
+    },
+    "Performance_Data": {
+      "Mobility": 47.4,
+      "Vth": -2.88,
+      "SS": 0.22,
+      "PBTS_Shift": "-0.67V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "ALD Supercycle Design ending with Zn sub-cycles -> Creates a Zn-rich back channel surface -> Suppresses formation of parasitic back channel and adsorption of O2/H2O -> Improved PBTS stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage (reactant is O2 plasma)"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Perumallapelli_2025_Scalable Solution-Processed a-InZnSnO",
+    "Material_Data": {
+      "Composition_Ratio": "InZnSnO",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 300,
+      "Deposition_Pressure": "Not Applicable (Solution Process)"
+    },
+    "Performance_Data": {
+      "Mobility": 15.69,
+      "Vth": null,
+      "SS": 0.103,
+      "PBTS_Shift": "0.10V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "UV/O3 treatment + 300°C anneal on GaZrOx dielectric -> Smoother dielectric surface, higher M-O content, lower Vo and -OH defects -> Reduced trap states at dielectric/channel interface -> High mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Composition_Ratio (exact)",
+        "Vth"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Lee_2025_Enabling low-temperature processing of amorphous SiZnSnO",
+    "Material_Data": {
+      "Composition_Ratio": "ZnO:SnO2 = 65:35 wt% with 0.5 wt% Si",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 350,
+      "Deposition_Pressure": "12 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 15.22,
+      "Vth": -0.8,
+      "SS": null,
+      "PBTS_Shift": "2.01V @ 7200s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Ar Plasma Treatment -> Creates oxygen vacancies and initial defects -> Subsequent Thermal Annealing -> Enhanced atomic mobility allows effective reconfiguration of M-O bonds -> Improved mobility and stability at a lower annealing temperature"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "SS"
+      ]
+    }
+  }
+]

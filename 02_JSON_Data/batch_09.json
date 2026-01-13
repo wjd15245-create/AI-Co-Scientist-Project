@@ -1,0 +1,201 @@
+[
+  {
+    "Paper_ID": "Lu_2023",
+    "Material_Data": {
+      "Composition_Ratio": "ZATO/ZTO Homojunction",
+      "Structure": "Amorphous/Polycrystalline Gradient"
+    },
+    "Process_Data": {
+      "Deposition_Pressure": "7.52 mTorr",
+      "O2_Percentage": 28.6,
+      "Anneal_Temp_C": 300
+    },
+    "Performance_Data": {
+      "Mobility": 113.8,
+      "Vth": -1.71,
+      "SS": 0.372,
+      "PBTS_Shift": "Not Reported"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium (High Mobility Verified, Stability Missing)"
+    }
+  },
+  {
+    "Paper_ID": "Wen_2024_apl-124-133501",
+    "Material_Data": {
+      "Composition_Ratio": "IGO (In:Ga = 2.3:1) / IGZO (In:Ga:Zn = 1:1:1)",
+      "Structure": "Polycrystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 38.0,
+      "Vth": -1.85,
+      "SS": 0.21,
+      "PBTS_Shift": "+0.14V @ 1000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Polycrystalline IGO layer and heterojunction -> Carrier accumulation at interface -> High Mobility; Lower oxygen vacancy concentration -> fewer trap states -> better stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Welk_2022_PhysRevApplied.17.024007",
+    "Material_Data": {
+      "Composition_Ratio": "ZnON",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 30.0,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": "null"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Deposition at 150C -> local disorder decrease -> increased intrinsic mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Anneal_Temp_C",
+        "Deposition_Pressure",
+        "Vth",
+        "SS",
+        "PBTS_Shift"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Jeon_2010_DeAOTS_Thesis",
+    "Material_Data": {
+      "Composition_Ratio": "a-IGZO (In:Ga:Zn = 2:2:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0.99,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 23.5,
+      "Vth": 1.26,
+      "SS": 0.792,
+      "PBTS_Shift": "null"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Paper focuses on modeling DOS from electrical characteristics, not the physical origin of performance."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "Deposition_Pressure",
+        "PBTS_Shift"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Yoo_2024_aelm.202300906",
+    "Material_Data": {
+      "Composition_Ratio": "a-IGZO (In:Ga:Zn = 1:1:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 13.6,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "7e-3 Torr"
+    },
+    "Performance_Data": {
+      "Mobility": 8.0,
+      "Vth": 6.5,
+      "SS": 1.1,
+      "PBTS_Shift": "null"
+    },
+    "Physics_Logic": {
+      "Mechanism": "null"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "PBTS_Shift"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Yoon_2023_micromachines-14-01596-v2",
+    "Material_Data": {
+      "Composition_Ratio": "ZnO",
+      "Structure": "Polycrystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 3.5,
+      "Vth": 0.7,
+      "SS": 0.1,
+      "PBTS_Shift": "null"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Use of high capacitive dielectrics (Al2O3) -> mitigates interface trap effects -> steep subthreshold swing"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Anneal_Temp_C",
+        "PBTS_Shift"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Franke_2025_aelm.202500527",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": null,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": "null"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Paper focuses on C-V analysis to extract DOS parameters (Et = 29 meV), not device performance optimization."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Composition_Ratio",
+        "O2_Percentage",
+        "Anneal_Temp_C",
+        "Deposition_Pressure",
+        "Mobility",
+        "Vth",
+        "SS",
+        "PBTS_Shift"
+      ]
+    }
+  }
+]

@@ -1,0 +1,281 @@
+[
+  {
+    "Paper_ID": "Kim_2024_JSTS_ZnO_TFTs",
+    "Material_Data": {
+      "Composition_Ratio": "ZnO",
+      "Structure": "Nanorods"
+    },
+    "Process_Data": {
+      "O2_Percentage": 100,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": null,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "1 MeV proton irradiation -> Increase in Vo defects in the ZnO channel layer -> Enhanced conductivity",
+      "Note": "Performance improved after 1 MeV proton irradiation. Anomalous hump phenomenon disappeared."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Mobility",
+        "Vth",
+        "SS",
+        "Stability_Data"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Gherendi_2024_Micromachines_ZnO_Paper_Transistors",
+    "Material_Data": {
+      "Composition_Ratio": "ZnO",
+      "Structure": "Polycrystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": "1-2 x 10^-2 mbar"
+    },
+    "Performance_Data": {
+      "Mobility": 25,
+      "Vth": -1.75,
+      "SS": 1.1,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "Deposition in obstacle shadow -> Higher oxygen incorporation in film -> Lower concentration of oxygen vacancies -> Higher resistivity channel suitable for transistor operation",
+      "Note": "Data is for the 'on' state of the memory transistor. Device exhibits a memory effect."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Stability_Data"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Wen_2024_APL_IGO_IGZO",
+    "Material_Data": {
+      "Composition_Ratio": "Front Channel: IGO (In:Ga = 2.3:1), Back Channel: IGZO (In:Ga:Zn = 1:1:1)",
+      "Structure": "Polycrystalline/Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 21,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 38.0,
+      "Vth": -1.85,
+      "SS": 0.21,
+      "PBTS_Shift": "+0.14V @ 1000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Polycrystalline IGO layer -> Superior carrier percolation conduction paths -> High mobility. Stacked structure also induces carrier accumulation at the heterojunction interface.",
+      "Note": "Best device after Post-Deposition Annealing (PDA) at 250 C."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "Ryu_2025_APSUSC_ZnSnO",
+    "Material_Data": {
+      "Composition_Ratio": "Zn:Sn = 58:42",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 21,
+      "Anneal_Temp_C": 500,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 22.3,
+      "Vth": 2.5,
+      "SS": 0.13,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "Post-deposition annealing -> Reduction in oxygen vacancies and sub-gap defect states -> Positive Vth shift and enhanced mobility",
+      "Note": "Device operates in enhancement mode."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Stability_Data"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Wei_2025_MSSP_ZnSnAlO",
+    "Material_Data": {
+      "Composition_Ratio": "ZTAO (Zn:Sn:Al = 15:15:1 cycle ratio)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 21,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 14.21,
+      "Vth": 0.60,
+      "SS": 0.40,
+      "PBTS_Shift": "+0.76V @ 2000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Air annealing -> Oxygen incorporation -> Reduction in Vo from 26% to 20.6% -> Defect passivation and transition from depletion to enhancement mode",
+      "Note": "Al incorporation effectively suppresses oxygen vacancy formation."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "Zhang_2024_MicroNano_IGTO_IGZO",
+    "Material_Data": {
+      "Composition_Ratio": null,
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "2 mtorr"
+    },
+    "Performance_Data": {
+      "Mobility": 17.25,
+      "Vth": 0.6,
+      "SS": 0.67,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "IGTO/IGZO heterojunction -> Large conduction band shift -> Generation of two-dimensional electron gas at the interface -> High mobility",
+      "Note": "Ar:O2 ratios were 16:2 for anterior and 65:20 for posterior channels."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Composition_Ratio",
+        "Stability_Data",
+        "Anneal_Atmosphere"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Zhu_2023_JCP_Hf_In2O3",
+    "Material_Data": {
+      "Composition_Ratio": "IHO (In2O3:HfO2 = 10:1 cycle ratio)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 21,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 13.4,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": "+0.28V @ 1800s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Hf doping -> Suppresses excess charge carriers -> Optimal balance between mobility and carrier concentration for FET operation",
+      "Note": "XPS confirms oxygen vacancy concentration decreases with increased Hf doping."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Vth",
+        "SS"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Avis_2025_Molecules_In2O3_Review",
+    "Material_Data": {
+      "Composition_Ratio": "Not Applicable",
+      "Structure": "Not Applicable"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": null,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "This is a review paper and does not contain primary experimental data. Data extraction is not applicable."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Not Applicable",
+      "Missing_Critical_Info": [
+        "Primary Experimental Data"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Liang_2025_Jallcom_Review",
+    "Material_Data": {
+      "Composition_Ratio": "Not Applicable",
+      "Structure": "Not Applicable"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": null,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "This is a review paper and does not contain primary experimental data. Data extraction is not applicable."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Not Applicable",
+      "Missing_Critical_Info": [
+        "Primary Experimental Data"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Jeon_2025_SoftSci_Review",
+    "Material_Data": {
+      "Composition_Ratio": "Not Applicable",
+      "Structure": "Not Applicable"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": null,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "This is a review paper and does not contain primary experimental data. Data extraction is not applicable."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Not Applicable",
+      "Missing_Critical_Info": [
+        "Primary Experimental Data"
+      ]
+    }
+  }
+]

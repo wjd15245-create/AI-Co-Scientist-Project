@@ -1,0 +1,240 @@
+[
+  {
+    "Paper_ID": "d3tc01379k.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "In:Ga:Zn:Sn = 4:1:4:1",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 4.76,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "1 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 47.17,
+      "Vth": -2.5,
+      "SS": 0.537,
+      "PBTS_Shift": "+1.4V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "DUV/Thermal Dual Treatment (DTT) -> Generation of oxygen radicals (O*) -> Promotes M-O bond formation and reduces defects/interface traps -> High mobility and improved stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "apsusc.2024.161320.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "Zn:Sn = 58:42",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 100,
+      "Anneal_Temp_C": 500,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 22.3,
+      "Vth": 2.5,
+      "SS": 0.13,
+      "PBTS_Shift": "null"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Post-deposition annealing (500 C) -> Reduction in oxygen vacancies and sub-gap defect states -> Decreased electron density and trap states -> Positive Vth shift, improved SS, and enhanced mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "PBTS_Shift",
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "d5tc01349f.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "Sb:IGZTO (1.53 at% Sb in In:Ga:Zn:Sn = 38.45:3.82:38.43:19.31)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 21,
+      "Anneal_Temp_C": 550,
+      "Deposition_Pressure": "Atmospheric"
+    },
+    "Performance_Data": {
+      "Mobility": 16.43,
+      "Vth": 0,
+      "SS": 0.374,
+      "PBTS_Shift": "+7.2V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Optimal Sb doping (3%) -> Maximizes Sb5+ ratio -> Sb5+ acts as donor (increases carriers) and oxygen binder (suppresses Vo, strengthens M-O bonds) -> Optimized charge transport path and reduced trap states -> High mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "jiec.2024.05.046.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "In:Zn = 43.2:56.8",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "760 Torr"
+    },
+    "Performance_Data": {
+      "Mobility": 45.7,
+      "Vth": -0.4,
+      "SS": 0.095,
+      "PBTS_Shift": "+0.63V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Optimal In:Zn ratio (43:57) -> Lowest oxygen deficiency (O-de) ratio and minimal bulk/interface defects -> Highest stability (lowest PBTS shift) and good mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "acsaelm.3c00431.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "Ti:ZnSnO (1.14 at% Ti in Zn:Sn=7:3 matrix)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 10.0,
+      "Anneal_Temp_C": 450,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 8.2,
+      "Vth": -1.34,
+      "SS": 0.208,
+      "PBTS_Shift": "+5.61V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Ti doping -> Strong Ti-O bond formation -> Suppresses oxygen vacancy (Vo) formation -> Reduced carrier concentration and improved NBS stability -> Trade-off between mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "aelm.202400766.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "a-IGZTO (In:Ga:Zn:Sn=4:1:4:1) / a-IZO (In:Zn=5.3:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 67.1,
+      "Vth": -0.02,
+      "SS": null,
+      "PBTS_Shift": "+0.94V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "a-IGZTO/a-IZO heterostructure -> Conduction band offset (ΔEc ≈ 0.22 eV) -> Formation of 2D Electron Gas (2DEG) at interface -> High carrier concentration and multiple conduction paths -> High mobility and robust PBTS stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Deposition_Pressure",
+        "SS"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "mssp.2025.109369.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "Zn:Sn:Al = 15:15:1 (supercycle ratio)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 100,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 14.21,
+      "Vth": 0.6,
+      "SS": 0.4,
+      "PBTS_Shift": "+0.76V @ 2000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Thermal annealing (250 C in air) -> Oxygen incorporation and structural relaxation -> Reduced oxygen vacancies (Vo) and increased M-O bonds -> Defect passivation and improved interface quality -> Enhanced mobility, positive Vth shift, and improved stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "acsami.4c06708.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO (In:Ga:Zn = 1:1:1) with MgOx interlayer",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 200,
+      "Deposition_Pressure": "5 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 16.12,
+      "Vth": 0.59,
+      "SS": 0.46,
+      "PBTS_Shift": "+1.72V @ 10000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Low-temp activation (200 C) with MgOx layer -> Mg atoms diffuse into IGZO channel -> Forms Mg-doped IGZO (MIGZO) with strong Mg-O bonds -> Suppresses oxygen vacancies and reduces defects at low temperature -> Enhanced mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "vacuum.2023.112868.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "In-doped SnO2 (3 mol% In)",
+      "Structure": "Nanocrystal"
+    },
+    "Process_Data": {
+      "O2_Percentage": 21,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "Atmospheric"
+    },
+    "Performance_Data": {
+      "Mobility": 8.94,
+      "Vth": 0.25,
+      "SS": 0.4,
+      "PBTS_Shift": "+0.91V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Moderate In doping (3%) -> In acts as Vo suppressor AND In's larger 5s orbitals increase orbital overlap -> Reduced carrier concentration (positive Vth shift) and enhanced percolation pathways -> Optimal balance of high mobility and good stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  }
+]

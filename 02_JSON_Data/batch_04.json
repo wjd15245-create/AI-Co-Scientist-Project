@@ -1,0 +1,267 @@
+[
+  {
+    "Paper_ID": "Hwang_2025",
+    "Material_Data": {
+      "Composition_Ratio": "AGTO (Ga/(Sb+Sn) = 0.2, Sb/Sn = 0.05)",
+      "Structure": "Polycrystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": 21,
+      "Anneal_Temp_C": 550,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 1.12,
+      "Vth": 1.5,
+      "SS": 3.77,
+      "PBTS_Shift": "+4.6V @ 10000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Ga doping -> Promotes M-O bonding and reduces oxygen-related defects (Vo) -> Suppresses excessive carriers and reduces defect states -> High mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Deposition pressure not applicable for solution process"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Park_2025",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO (In:Ga:Zn = 1:1:1)",
+      "Structure": "Amorphous / Al-doped EIL"
+    },
+    "Process_Data": {
+      "Deposition_Pressure": "3.7e-8 Torr (UHV Base Pressure)",
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 300,
+      "Note": "Controlled Hydrogen impurities via UHV system"
+    },
+    "Performance_Data": {
+      "Mobility": 134.0,
+      "Vth": 0.1,
+      "SS": 0.039,
+      "PBTS_Shift": "< 0.3V @ 1000s (100°C)"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Highest (Champion Data Verified)"
+    }
+  },
+  {
+    "Paper_ID": "Choi_2025",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO (In:Ga:Zn = 6:1:4)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 100,
+      "Anneal_Temp_C": 500,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 3.13,
+      "Vth": 6.4,
+      "SS": 1.32,
+      "PBTS_Shift": "+1.6V @ 10800s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Dual-gate operation -> Quantum mechanical channel formation in center of active layer -> Reduced parasitic resistance -> Higher mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Deposition pressure not applicable for solution process"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Park_2026",
+    "Material_Data": {
+      "Composition_Ratio": "InOx with YOx capping layer",
+      "Structure": "Crystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": 21,
+      "Anneal_Temp_C": 350,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 6.46,
+      "Vth": 0.88,
+      "SS": 0.25,
+      "PBTS_Shift": "+3.31V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "High-temperature anneal + YOx capping layer -> Promotes crystallization and suppresses excess free electrons -> Reduces bulk trap states (In-disorder, imperfect M-O bonding) -> Enhanced stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "O2 percentage assumed from 'air-annealing' description"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Xiao_2025",
+    "Material_Data": {
+      "Composition_Ratio": "ITZO (In:Sn:Zn=4:1:4) / IGZO (In:Ga:Zn=1:1:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "Deposition_Pressure": "7.5 mTorr",
+      "O2_Percentage": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 48.34,
+      "PBTS_Shift": "+0.05V @ 3600s (60°C)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "ITZO/IGZO heterojunction + Al2O3 passivation -> 2DEG formation + suppression of Vo and -OH defects -> High carrier concentration and reduced traps -> High mobility and excellent stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "O2_Percentage"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Oh_2024",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO (In:Ga:Zn=12:1:1) / GZO (Ga:Zn=4:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 31.9,
+      "Vth": -0.14,
+      "SS": 0.2,
+      "PBTS_Shift": "0.00V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Optimized GZO layer on IGZO -> Minimized interface defect density + band alignment modulation -> Reduced electron trapping and physical separation of channel from gate insulator -> High mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "O2_Percentage"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Kim_2025_APSUSC",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO (In:Ga:Zn ratio not stated)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 38.9,
+      "Vth": -0.19,
+      "SS": 0.07,
+      "PBTS_Shift": "-0.199V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "CF4 plasma treatment on HfO2 gate insulator -> Fluorine passivates oxygen vacancies at the IGZO/HfO2 interface -> Reduced electron trapping sites -> Enhanced mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Composition_Ratio",
+        "O2_Percentage for IGZO deposition"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Son_2025",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO (In:Ga:Zn = 1:1:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 11,
+      "Vth": 0.8,
+      "SS": 0.115,
+      "PBTS_Shift": "+0.5V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Longer channel length -> Reduced relative impact of source/drain parasitic resistance -> Higher extracted field-effect mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Anneal_Temp_C",
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Billah_2025",
+    "Material_Data": {
+      "Composition_Ratio": "IGZTO (In:Ga:Zn:Sn:O=4:1:4:1:13.5) / IZO (In:Zn:O=5.3:1:9)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 67.1,
+      "Vth": -0.02,
+      "SS": null,
+      "PBTS_Shift": "+0.94V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "a-IGZTO/a-IZO heterojunction with Dual Gate -> Formation of 2DEG and three conduction channels -> High carrier concentration and transport paths -> High mobility and excellent PBTS stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Deposition_Pressure",
+        "SS"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Shin_2026",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO (In:Ga:Zn = 1:1:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 1.64,
+      "Anneal_Temp_C": 200,
+      "Deposition_Pressure": "5 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 28,
+      "Vth": -1,
+      "SS": 0.15,
+      "PBTS_Shift": "+0.12V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "N2O plasma with Al2O3 protective layer -> Passivates oxygen vacancies in IGZO bulk without creating interface traps -> Reduced trap density -> Significantly enhanced stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  }
+]

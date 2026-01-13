@@ -1,0 +1,141 @@
+[
+  {
+    "Paper_ID": "Kim_2012_ACS_Appl_Mater_Interfaces",
+    "Material_Data": {
+      "Composition_Ratio": "Bilayer: HIZO (Hf:In:Zn=10:35:55) on IZO (In:Zn=85:15)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Deposition_Pressure": null,
+      "Anneal_Temp_C": 250,
+      "Note": "Process details not specified in text"
+    },
+    "Performance_Data": {
+      "Mobility": 48.0,
+      "Vth": -1.02,
+      "PBTS_Shift": "-1.18V @ 10800s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Bilayer structure (IZO for mobility, HIZO for stability) -> IZO provides high mobility path, Hf in HIZO suppresses oxygen vacancy formation -> High mobility with good stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Zhang_2024_Appl_Phys_Rev",
+    "Material_Data": {
+      "Composition_Ratio": "a-GaOx",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 450,
+      "Deposition_Pressure": "10 mTorr O2"
+    },
+    "Performance_Data": {
+      "Mobility": 31.0,
+      "Vth": 3.3,
+      "SS": 1.17,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "Hydrogen annealing -> Termination of subgap defects and electron trap sites -> Reduced subgap DOS and high mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Total_Deposition_Pressure",
+        "PBTS_Shift"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Wen_2024_Appl_Phys_Lett",
+    "Material_Data": {
+      "Composition_Ratio": "Bilayer: IGO (In:Ga=2.3:1) on IGZO (In:Ga:Zn=1:1:1)",
+      "Structure": "Polycrystalline/Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 38.0,
+      "Vth": -1.85,
+      "SS": 0.21,
+      "PBTS_Shift": "+1.66V @ 1000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Polycrystalline IGO layer -> Carrier accumulation at hetero-interface and fewer oxygen vacancies -> High mobility and better stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Jeon_2010_Thesis_Kookmin_Univ",
+    "Material_Data": {
+      "Composition_Ratio": "a-IGZO (In:Ga:Zn=2:2:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0.99,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 23.5,
+      "Vth": 1.26,
+      "SS": 0.792,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "Not Applicable (Modeling Thesis)"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Deposition_Pressure",
+        "PBTS_Shift"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Lu_2023_J_Semicond",
+    "Material_Data": {
+      "Composition_Ratio": "Homojunction: ZATO(unannealed)/ZATO(annealed)/ZTO(annealed)",
+      "Structure": "Amorphous/Polycrystalline Gradient"
+    },
+    "Process_Data": {
+      "O2_Percentage": 28.6,
+      "Anneal_Temp_C": 900,
+      "Deposition_Pressure": "1.5-7.52 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 113.8,
+      "Vth": -1.71,
+      "SS": 0.372,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "Gradient in crystallinity and Al concentration -> Low-resistance path for carrier transport without traditional channel formation -> Ultra-high mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "PBTS_Shift"
+      ]
+    }
+  }
+]

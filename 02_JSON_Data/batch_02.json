@@ -1,0 +1,268 @@
+[
+  {
+    "Paper_ID": "1_Lv_2025_Enhanced electrical stability of IGZO.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "In:Ga:Zn = 2:2:1",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 11.61,
+      "Vth": -0.23,
+      "SS": 0.114,
+      "PBTS_Shift": "-0.02V @ 10000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Engineered Al2O3/HfO2 dual-layer gate insulator -> Controlled hydrogen diffusion and mitigated electron traps at the IGZO/GI interface -> Enhanced PBTS stability and excellent electrical performance."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Deposition_Pressure",
+        "Structure Confirmation (XRD)"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "2_Xiao_2025_Enhanced Carrier Transport and Stability.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "ITZO (In2O3:SnO2:ZnO = 4:1:4) / IGZO (In2O3:Ga2O3:ZnO = 1:1:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 300,
+      "Deposition_Pressure": "7.5 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 48.34,
+      "Vth": 0.56,
+      "SS": 0.06,
+      "PBTS_Shift": "+0.05V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Al2O3 passivation layer -> Suppression of channel defects (Oxygen Vacancies, Hydroxyls) and increased metal-oxide bonding -> Improved carrier transport and device stability."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "3_Weldemhret_2025_Evaluation of the high mobility and stability.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "ITZO (In2O3:SnO2:ZnO = 2:4:2 at %) / IGZO (In2O3:Ga2O3:ZnO = 1:1:2 at %)",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "O2_Percentage": 35.96,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "3 mTorr (ITZO), 5 mTorr (IGZO)"
+    },
+    "Performance_Data": {
+      "Mobility": 36.0,
+      "Vth": -1.04,
+      "SS": null,
+      "PBTS_Shift": "+1.15V @ 7200s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Bilayer IGZO/ITZO structure -> Optimization of shallow donor defect density -> Simultaneous achievement of high mobility and less negative Vth."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "SS",
+        "Structure Confirmation (XRD)"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "4_Lee_2022_Enhancement of the Electrical Performance.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "ITZO (In2O3:SnO2:ZnO = 4:1:4 mol %)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 10,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "7.5 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 17.31,
+      "Vth": 6.41,
+      "SS": 0.24,
+      "PBTS_Shift": "+0.42V @ 3600s (PBS)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Bilayer channel with oxygen-compensated capping layer -> Increased metal oxide concentration and decreased oxygen vacancy and hydroxyl concentration -> Enhanced mobility and bias stability."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "5_Baek_2022_Vertical oxide thin-film transistor.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO (In:Ga:Zn = 1:1:1 at.%)",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "O2_Percentage": 23.07,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "5 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 0.29,
+      "Vth": 0.3,
+      "SS": 0.2,
+      "PBTS_Shift": "+0.1V @ 12000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Interfacial oxidation of Ta gate metal during annealing -> Formation of a very thin (15 nm) TaOx gate insulator -> Enables low voltage operation (< 1V)."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Structure Confirmation (XRD)"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "6_Su_2026_Performance enhancement of InSnZnO.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "Li, N co-doped InSnZnO",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "O2_Percentage": 3.23,
+      "Anneal_Temp_C": 275,
+      "Deposition_Pressure": "0.1 Pa"
+    },
+    "Performance_Data": {
+      "Mobility": 50.51,
+      "Vth": -0.77,
+      "SS": 0.59,
+      "PBTS_Shift": "null"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Dual-active-layer architecture -> Accumulation of high carrier concentration at the interface between the gate dielectric and the front-channel layer -> High mobility."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "PBTS_Shift",
+        "Precise Composition_Ratio",
+        "Structure Confirmation (XRD)"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "7_Lai_2025_Enhanced Mobility and Stability of Amorphous IZO.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "High-In IZO (In:Zn = 9:1) / Low-In IZO",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 39.4,
+      "Anneal_Temp_C": 330,
+      "Deposition_Pressure": "0.5 Pa"
+    },
+    "Performance_Data": {
+      "Mobility": 50.4,
+      "Vth": 0.1,
+      "SS": 0.065,
+      "PBTS_Shift": "+0.29V @ 10000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "IZO homojunction + CF4 plasma treatment + Al2O3 passivation -> q-2DEG formation + fluorine doping of back channel + reduction of deep-subgap state density -> High mobility and superior gate-bias stress stability."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "8_Billah_2025_Multi-Channel Amorphous Oxide.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "Top: a-IGZTO (In:Ga:Zn:Sn:O = 4:1:4:1:13.5 mol%) / Bottom: a-IZO (In:Zn:O = 5.3:1:9 mol%)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 67.1,
+      "PBTS_Shift": "+0.94V @ 3600s (60°C)",
+      "SS": 0.11
+    },
+    "Physics_Logic": {
+      "Mechanism": "Dual-gate, multi-channel (IGZTO/IZO) structure -> Formation of 2D electron gas (2DEG) at hetero-interface and three-channel conduction -> High mobility and excellent PBTS stability."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "SS",
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "9_Lee_2022_Hydrogen-Doping-Enabled Boosting.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "a-In0.29Ga0.35Zn0.11Sn0.25O",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "2 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 85.9,
+      "PBTS_Shift": "+0.42V @ 3600s (PBS, Room Temp)",
+      "Note": "Excellent PBS stability at RT confirmed."
+    },
+    "Physics_Logic": {
+      "Mechanism": "Hydrogen doping from PEALD SiO2 passivation into Sn-containing IGZO (IGZTO) -> Formation of substitutional H on O sites (Ho), which reduces effective mass -> Boosted carrier mobility and stability."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "10_Kim_2024_Improved mobility and bias stability.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO:Hf (from In:Ga:Zn=1:1:1 target) / IZO (ratio not specified)",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "O2_Percentage": 10,
+      "Anneal_Temp_C": 300,
+      "Deposition_Pressure": "5 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 39.82,
+      "Vth": -0.3,
+      "SS": 0.222,
+      "PBTS_Shift": "+0.86V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Multichannel IGZO:Hf/IZO/IGZO:Hf structure -> 2DEG formation at hetero-interface and suppression of oxygen vacancies by Hf doping -> High mobility and high stability."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "IZO Composition_Ratio",
+        "Structure Confirmation (XRD)"
+      ]
+    }
+  }
+]

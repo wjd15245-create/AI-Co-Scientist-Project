@@ -1,0 +1,272 @@
+[
+  {
+    "Paper_ID": "Ren_2022_JPhysD_SnOx",
+    "Material_Data": {
+      "Composition_Ratio": "SnOx",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 350,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 5.57,
+      "Vth": 0.14,
+      "SS": 0.57,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "Oxygen Plasma Treatment (40W, 90s) -> Fills oxygen vacancies (Vo) in SnOx film -> Reduces carrier concentration and improves film quality -> High mobility achieved with high-k Al2O3 dielectric"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Stability"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Xu_2014_APL_IGZO",
+    "Material_Data": {
+      "Composition_Ratio": "InGaZnO",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 21,
+      "Anneal_Temp_C": 100,
+      "Deposition_Pressure": "≈10-6 Torr (for contacts)"
+    },
+    "Performance_Data": {
+      "Mobility": 2.8,
+      "Vth": 8.0,
+      "SS": 0.3,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "Post-metallization annealing in air -> Repairs oxygen vacancies created at metal/semiconductor interface during contact deposition -> Reduces mobile electron density and trap states -> Improved uniformity, positive Vth shift, and low SS"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Composition_Ratio",
+        "Stability"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Kim_2025_MSSP_IGTO",
+    "Material_Data": {
+      "Composition_Ratio": "In:Ga:Sn = 7:1:2",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 50,
+      "Anneal_Temp_C": 180,
+      "Deposition_Pressure": "3e-3 Torr"
+    },
+    "Performance_Data": {
+      "Mobility": 17.93,
+      "Vth": -0.3,
+      "SS": 0.18,
+      "PBTS_Shift": "3.7V @ 3000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "CF4 plasma treatment -> Incorporation of F dopants bonds with metal ions and passivates interfacial traps and vacancy states -> Reduced defect states -> Improved mobility and bias stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "Wang_2024_ApSurfSci_In2O3",
+    "Material_Data": {
+      "Composition_Ratio": "In2O3",
+      "Structure": null
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 5.06,
+      "Vth": 4.43,
+      "SS": 0.3,
+      "PBTS_Shift": "9.1V @ 1000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Focused N2 plasma treatment -> Reduces oxygen vacancies (Ovac) and metal-hydroxyl (M-OH) groups -> Lowers trap site density -> Improved mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Sheng_2016_ACSAMI_IZO",
+    "Material_Data": {
+      "Composition_Ratio": "Zn:In = 1:0.57",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "Oxidant_Info": "H2O2 (Hydrogen Peroxide)",
+      "Anneal_Temp_C": 200,
+      "O2_Percentage": null
+    },
+    "Performance_Data": {
+      "Mobility": 42.1,
+      "PBTS_Shift": "+1.0V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Higher ALD growth temperature (200°C) -> Increased oxygen deficiency and shallow donor states -> Higher carrier concentration and Hall mobility -> High performance and improved PBTS stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Liu_2025_ACSAMI_ZnO",
+    "Material_Data": {
+      "Composition_Ratio": "ZnO",
+      "Structure": "Polycrystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 150,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": 16.6,
+      "Vth": -0.49,
+      "SS": 0.14,
+      "PBTS_Shift": "0.5V @ 10000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Low-temperature (150°C) ALD -> High-density, high-quality polycrystalline film -> Good mobility and stability. Ohmic contact from Ti scavenging oxygen."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Hanifah_2023_ACSAEM_IZO",
+    "Material_Data": {
+      "Composition_Ratio": "In:Zn = 77:23 (wt %)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 300,
+      "Deposition_Pressure": "5 Pa (during plasma)"
+    },
+    "Performance_Data": {
+      "Mobility": 31.12,
+      "Vth": -0.3,
+      "SS": 0.22,
+      "PBTS_Shift": "-0.3V @ 2000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Argon plasma treatment -> Induces film densification and increases nonstoichiometric oxygen (Vo) -> Higher mobile carrier concentration and lower interface trap density -> Enhanced mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  },
+  {
+    "Paper_ID": "Kil_2024_IEEE_PolySi",
+    "Material_Data": {
+      "Composition_Ratio": "poly-Si",
+      "Structure": "Polycrystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 300,
+      "Deposition_Pressure": "10 bar"
+    },
+    "Performance_Data": {
+      "Mobility": 44.6,
+      "Vth": 6.11,
+      "SS": 1.22,
+      "PBTS_Shift": "0.92V @ 4000s (HCI)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Low-Temperature Deuterium Annealing (LTDA) -> Deuterium passivates interface traps (Dit) -> Reduced trap density -> Improved mobility, SS, and hot-carrier reliability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Material is not an oxide semiconductor"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Shi_2023_JoS_Review",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO:F",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 10,
+      "Anneal_Temp_C": 300,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": null,
+      "Vth": 0.0,
+      "SS": null,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "CF4 plasma treatment (fluorination) -> Suppresses population of donor-species (e.g., H-related) -> Reduced variation and negative shift of turn-on voltage (VON) and improved stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "This is a review paper",
+        "Mobility",
+        "SS",
+        "Stability"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Jeon_2025_SoftSci_Review",
+    "Material_Data": {
+      "Composition_Ratio": "N/A (Review)",
+      "Structure": "N/A (Review)"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": null
+    },
+    "Performance_Data": {
+      "Mobility": null,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": null
+    },
+    "Physics_Logic": {
+      "Mechanism": "N/A (Review paper summarizing various mechanisms like doping, multi-layers, and device architecture for improving flexible MO TFTs)"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "This is a review paper",
+        "All data fields"
+      ]
+    }
+  }
+]

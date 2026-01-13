@@ -1,0 +1,252 @@
+[
+  {
+    "Paper_ID": "Xiao_2025",
+    "Material_Data": {
+      "Composition_Ratio": "ITZO (In2O3:SnO2:ZnO = 4:1:4) / IGZO (In2O3:Ga2O3:ZnO = 1:1:1)",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "Deposition_Pressure": "7.5 mTorr",
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 300
+    },
+    "Performance_Data": {
+      "Mobility": 48.34,
+      "Vth": 0.56,
+      "SS": 0.06,
+      "PBTS_Shift": "+0.05V @ 3600s (60°C)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Formation of a two-dimensional electron gas (2DEG) at the heterojunction interface -> Electron confinement -> Enhanced mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "PBTS_Shift"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Wen_2024",
+    "Material_Data": {
+      "Composition_Ratio": "IGO (In:Ga = 2.3:1) / IGZO (In:Ga:Zn = 1:1:1)",
+      "Structure": "Polycrystalline (IGO) / Amorphous (IGZO)"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 38.0,
+      "Vth": -1.85,
+      "SS": 0.21,
+      "PBTS_Shift": "+0.14V @ 1000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Polycrystalline IGO layer -> Superior carrier percolation conduction paths -> High mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Shima_2025",
+    "Material_Data": {
+      "Composition_Ratio": "InOx (Crystal IO)",
+      "Structure": "Polycrystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 200,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 92.4,
+      "Vth": 0.37,
+      "SS": null,
+      "PBTS_Shift": "+0.2V @ 21600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "H2 addition during sputtering -> Reduced crystal nucleation density -> Larger grains -> Less susceptible to grain boundary scattering -> High mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Deposition_Pressure",
+        "SS"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Su_2025",
+    "Material_Data": {
+      "Composition_Ratio": "ITZO (SnO2:ZnO:In2O3 = 5:20:75 wt%)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 40.4,
+      "Vth": "null",
+      "SS": "null",
+      "PBTS_Shift": "Not Reported (Focus on NBIS: -7.4V)",
+      "Note": "Paper focuses on Photostability (NBIS), PBTS data missing"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Sn-doping -> Large dispersion of the conduction band composed of Sn5s orbitals -> High mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium (High Mobility Verified, but PBTS missing)",
+      "Missing_Critical_Info": [
+        "Deposition_Pressure",
+        "PBTS_Shift"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Kim_2025_VTFT",
+    "Material_Data": {
+      "Composition_Ratio": "IZO (In2O3:ZnO = 90:10 wt%) / IGZO (In2O3:Ga2O3:ZnO = 1:1:1 mol%)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 40,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": "5 mTorr (IZO) / 10 mTorr (IGZO)"
+    },
+    "Performance_Data": {
+      "Mobility": 18.41,
+      "Vth": 0.19,
+      "SS": 0.4,
+      "PBTS_Shift": "+0.7V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Pulse-induced Joule heating -> Induces quasi-two-dimensional electron gas (q-2DEG) at IZO/IGZO interface -> Mitigates electron scattering and strengthens carrier confinement -> Improves mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Anneal_Temp_C"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Kang_2025",
+    "Material_Data": {
+      "Composition_Ratio": "a-ZTO (Zn:Sn = 7:3)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 450,
+      "Deposition_Pressure": "5 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": null,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": "+4.29V @ 5000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "High bond dissociation energy of Sn-O bonds -> Superior resistance to oxygen vacancy generation -> Improved radiation resistance and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Mobility",
+        "Vth",
+        "SS"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Shi_2024",
+    "Material_Data": {
+      "Composition_Ratio": "a-IGZO (In:Ga:Zn = 1:1:1)",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0.25,
+      "Anneal_Temp_C": 150,
+      "Deposition_Pressure": "0.4 Pa"
+    },
+    "Performance_Data": {
+      "Mobility": 20.0,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": "+0.14V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Pd electrode as hydrogen transfer pathway -> Catalytic dissociation of H2 into atomic H -> H reacts with interface oxide -> Forms highly conductive metallized interlayer -> Reduced contact resistance and increased mobility"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "Vth",
+        "SS"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Lee_2025",
+    "Material_Data": {
+      "Composition_Ratio": "a-IGZO (In:Ga:Zn = 1:1:1) / In-rich a-IGZO",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 15,
+      "Anneal_Temp_C": null,
+      "Deposition_Pressure": "15 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 42.1,
+      "Vth": null,
+      "SS": 0.0822,
+      "PBTS_Shift": "+0.1V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "a-IGZO/In-rich a-IGZO heterostructure -> Quantum confinement effect confines carrier path to heterointerface -> Carrier path is shifted away from gate insulator -> Reduced interface trap density and enhanced transport -> High mobility and stability"
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Anneal_Temp_C",
+        "Vth"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "Kim_2024",
+    "Material_Data": {
+      "Composition_Ratio": "IGZO:Hf / IZO / IGZO:Hf",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 10,
+      "Anneal_Temp_C": 300,
+      "Deposition_Pressure": "5 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 39.82,
+      "Vth": -0.34,
+      "SS": 0.24,
+      "PBTS_Shift": "+0.86V @ 3600s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "IZO layer forms 2DEG at interface with IGZO:Hf -> Accumulates free carriers -> Improves mobility. Hf doping -> Reduces oxygen vacancies (Vo) -> Improves stability."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": []
+    }
+  }
+]

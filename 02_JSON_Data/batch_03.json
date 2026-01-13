@@ -1,0 +1,200 @@
+[
+  {
+    "Paper_ID": "pssa.202300544.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "In2O3:SnO2:ZnO = 4:1:4 mol %",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "O2_Percentage": 10,
+      "Anneal_Temp_C": 260,
+      "Deposition_Pressure": "7.5 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 16.69,
+      "Vth": 6.8,
+      "SS": 0.22,
+      "PBTS_Shift": "22.3V @ 3600s (70C)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Oxygen Compensated Capping Layer (CCL) deposition -> Diffusion of compensated oxygen from CCL to Uncompensated Channel Layer (UCL) during annealing -> Increased Metal-Oxide concentration and decreased Oxygen Vacancy (Vo) and -OH concentration -> Enhanced mobility and stability."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "Crystallinity"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "fmats.2025.1735405.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "In:Ga:Zn = 2:2:1",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "O2_Percentage": 0,
+      "Anneal_Temp_C": 400,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 11.66,
+      "Vth": -0.16,
+      "SS": 0.106,
+      "PBTS_Shift": "-0.07V @ 10000s (125C)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Engineered Al2O3/HfO2 dual-layer gate insulator -> Precise modulation of Hydrogen (H) diffusion and electron trapping dynamics -> Balances Vth control, SS, and interface quality -> Maintains high mobility while improving stability over single-layer insulators."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Deposition_Pressure",
+        "Crystallinity"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "apl.2024.133501.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "Bilayer: IGO (In:Ga = 2.3:1) / IGZO (In:Ga:Zn = 1:1:1)",
+      "Structure": "Polycrystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 38.0,
+      "Vth": -1.85,
+      "SS": 0.21,
+      "PBTS_Shift": "1.66V @ 1000s (70C)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Polycrystalline IGO front channel combined with IGZO back channel -> Heterojunction structure induces energy band bending -> Accumulation of free carriers at the IGO/IGZO interface -> High mobility."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "O2_Percentage",
+        "Deposition_Pressure"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "mssp.2025.109879.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "In:Ga:Sn = 65:20:15",
+      "Structure": "Amorphous"
+    },
+    "Process_Data": {
+      "O2_Percentage": 2,
+      "Anneal_Temp_C": 250,
+      "Deposition_Pressure": "10 mTorr"
+    },
+    "Performance_Data": {
+      "Mobility": 37.3,
+      "Vth": -15.0,
+      "SS": null,
+      "PBTS_Shift": "0.21V @ 5000s (PBS)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Optimal O2/(Ar+O2) ratio of 2% -> Suppresses carrier concentration from conductive state without over-oxidizing -> Balances carrier density and reduces weakly bonded oxygen -> High mobility and improved stability."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "SS"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "jallcom.2021.162308.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "Al-doped InSnZnO (Al:ITZO)",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "O2_Percentage": 40,
+      "Anneal_Temp_C": 340,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 46.5,
+      "Vth": -6.38,
+      "SS": 0.22,
+      "PBTS_Shift": "-3.8V @ 10000s"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Short O2 plasma time (0.3s) during PEALD of SiO2 gate insulator -> Incomplete reaction of precursors -> Higher H incorporation and higher Oxygen Vacancy (Vo) in Al:ITZO channel -> High carrier concentration -> High mobility."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Medium",
+      "Missing_Critical_Info": [
+        "Composition_Ratio",
+        "Deposition_Pressure",
+        "Crystallinity"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "jos.2026.47.022304.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "In2O3",
+      "Structure": "Crystalline"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 330,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 13.24,
+      "Vth": -8.8,
+      "SS": 4.87,
+      "PBTS_Shift": "1.7V @ 1800s (PBS)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Pristine (undoped) In2O3 -> High concentration of native oxygen vacancies -> High intrinsic carrier density -> High mobility."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "High",
+      "Missing_Critical_Info": [
+        "O2_Percentage (annealed in air)",
+        "Deposition_Pressure (solution processed)"
+      ]
+    }
+  },
+  {
+    "Paper_ID": "led.2023.3303867.pdf",
+    "Material_Data": {
+      "Composition_Ratio": "Bilayer: IZO (In:Zn = 7:3) / HIZO (15% Hf)",
+      "Structure": "null"
+    },
+    "Process_Data": {
+      "O2_Percentage": null,
+      "Anneal_Temp_C": 330,
+      "Deposition_Pressure": "null"
+    },
+    "Performance_Data": {
+      "Mobility": 7.08,
+      "Vth": null,
+      "SS": null,
+      "PBTS_Shift": "4.8V @ 5000s (50C)"
+    },
+    "Physics_Logic": {
+      "Mechanism": "Hf in HIZO back-channel -> Adsorbs oxygen ions from IZO front-channel during annealing -> Creates a vertically graded oxygen vacancy profile (low Vo in back, high Vo in front) -> High mobility from front channel and high stability from back channel."
+    },
+    "Confidence_Check": {
+      "Data_Quality": "Low",
+      "Missing_Critical_Info": [
+        "Vth",
+        "SS",
+        "Crystallinity",
+        "O2_Percentage (annealed in air)",
+        "Deposition_Pressure (solution processed)"
+      ]
+    }
+  }
+]
