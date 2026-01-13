@@ -151,7 +151,7 @@ def ask_gemini(api_key, evidence, u):
         genai.configure(api_key=api_key)
         g_model = genai.GenerativeModel("models/gemini-2.5-flash")
         prompt = f"""
-        당신은 삼성전자 반도체 수석 연구원입니다.
+        당신은 반도체 분야에서 최고로 권위가 있는 연구원입니다.
         [근거 논문]: {evidence['Paper_ID']} (Mechanism: {evidence['Mechanism']})
         [제안 조건]: In:{u['In']:.2f}, Ga:{u['Ga']:.2f}, Sn:{u['Sn']:.2f}, Temp:{u['Temp']}C, Thickness:{u['Thick']}nm
         
@@ -275,3 +275,4 @@ with tab2:
             with st.spinner("Analyzing..."):
                 u = {'In':in_r, 'Ga':ga_r, 'Zn':zn_r, 'Sn':sn_r, 'Temp':temp, 'Thick':thickness}
                 st.markdown(f"<div class='gemini-box'>{ask_gemini(api_key, ev, u)}</div>", unsafe_allow_html=True)
+
