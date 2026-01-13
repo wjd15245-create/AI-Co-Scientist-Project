@@ -10,14 +10,14 @@ import plotly.graph_objects as go
 import google.generativeai as genai
 
 # ---------------------------------------------------------
-# [설정]
+# [설정] 페이지 스타일
 # ---------------------------------------------------------
 st.set_page_config(page_title="AI Co-Scientist: Deep Optimization", page_icon="🧬", layout="wide")
 st.markdown("""
 <style>
     .stApp { background-color: #0E1117; color: #FAFAFA; }
     .gemini-box { background-color: #1E1E1E; padding: 20px; border-left: 5px solid #8e44ad; border-radius: 10px; margin-top:10px;}
-    .metric-card { background-color: #262730; padding: 15px; border-radius: 8px; text-align: center; border: 1px solid #444; }
+    .metric-box { background-color: #262730; padding: 15px; border-radius: 8px; text-align: center; border: 1px solid #444; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -37,17 +37,18 @@ class ExpertAI(nn.Module):
 
 @st.cache_resource
 def load_system():
+    # 배포 환경과 로컬 환경 경로 호환성 확보
     base = os.getcwd()
     model_path = os.path.join(base, '04_Trained_Model', 'real_model.pth')
     db_path = os.path.join(base, '03_Model_Input', 'real_paper_db.csv')
     
-    if not os.path.exists(model_path) or not os.path.exists(db_path): return None, None, None, None
+    # 파일이 없으면 None 반환
+    if not os.path.exists(model_path) or not os.path.exists(db_path): 
+        return None, None, None, None
     
     model = ExpertAI()
     model.load_state_dict(torch.load(model_path, map_location='cpu'))
-    
-    # MC Dropout을 위해 train 모드 유지
-    model.train() 
+    model.train() # MC Dropout 활성화
     
     sx = joblib.load(os.path.join(base, '04_Trained_Model', 'scaler_X_real.pkl'))
     sy = joblib.load(os.path.join(base, '04_Trained_Model', 'scaler_y_real.pkl'))
@@ -57,30 +58,25 @@ def load_system():
 model, sx, sy, df_db = load_system()
 
 # ---------------------------------------------------------
-# [1] 핵심 기능: 불확실성 예측, GA, 차트
+# [1] 핵심 기능 함수들
 # ---------------------------------------------------------
 def predict_with_uncertainty(X_tensor, n_iter=20):
-    """MC Dropout을 이용한 불확실성(Uncertainty) 계산"""
     preds = []
     with torch.no_grad():
         for _ in range(n_iter):
             preds.append(model(X_tensor).numpy())
-    preds = np.array(preds) # (n_iter, batch, 2)
+    preds = np.array(preds)
     
-    mean_pred = preds.mean(axis=0) # 평균값
-    std_pred = preds.std(axis=0)   # 표준편차 (불확실성)
+    mean_pred = preds.mean(axis=0)
+    std_pred = preds.std(axis=0)
     
-    # 스케일링 역변환 (평균값만)
     final_mean = sy.inverse_transform(mean_pred)
-    
-    # 표준편차는 스케일 비율만큼 보정
     scale_factor = sy.data_max_ - sy.data_min_
     final_std = std_pred * scale_factor
     
     return final_mean, final_std
 
 def run_genetic_algorithm(min_temp, max_temp, thickness):
-    """유전 알고리즘 + 두께 물리 보정"""
     pop_size = 300
     pop = []
     for _ in range(pop_size):
@@ -90,23 +86,18 @@ def run_genetic_algorithm(min_temp, max_temp, thickness):
     
     df_pop = pd.DataFrame(pop, columns=['In','Ga','Zn','Sn','Temp'])
     
-    # 물리적 보정 계수
     thick_factor_mob = np.log10(thickness + 10) / np.log10(60) 
     thick_factor_stab = 1.0 
     
-    for _ in range(10): # 10세대 진화
+    for _ in range(10): 
         X = sx.transform(df_pop.values)
-        
-        # 일반 예측 (GA 속도를 위해 Dropout 끔)
         model.eval() 
         with torch.no_grad():
             pred = sy.inverse_transform(model(torch.tensor(X, dtype=torch.float32)).detach().numpy())
-        model.train() # 다시 켜기
+        model.train() 
         
-        # 물리 보정 적용
         df_pop['Mobility'] = pred[:,0] * thick_factor_mob
         df_pop['Stability'] = pred[:,1] * thick_factor_stab
-        
         df_pop['Score'] = df_pop['Mobility'] - (df_pop['Stability'] * 5)
         
         top = df_pop.sort_values('Score', ascending=False).head(int(pop_size*0.2))
@@ -121,7 +112,7 @@ def run_genetic_algorithm(min_temp, max_temp, thickness):
             new_pop.append(child)
         df_pop = pd.DataFrame(new_pop, columns=['In','Ga','Zn','Sn','Temp'])
     
-    # [FIX] 마지막 세대(Final Generation)에 대해 점수 재계산 (이 부분이 빠져서 에러 발생했음)
+    # 점수 재계산
     X_final = sx.transform(df_pop.values)
     model.eval()
     with torch.no_grad():
@@ -132,13 +123,9 @@ def run_genetic_algorithm(min_temp, max_temp, thickness):
     df_pop['Stability'] = pred_final[:,1] * thick_factor_stab
     df_pop['Score'] = df_pop['Mobility'] - (df_pop['Stability'] * 5)
     
-    # 최종 결과 정렬
     final_res = df_pop.sort_values('Score', ascending=False)
-    
-    # 그래프 사이즈 정규화
     min_s, max_s = final_res['Score'].min(), final_res['Score'].max()
     final_res['PlotSize'] = 5 + ((final_res['Score'] - min_s) / (max_s - min_s + 1e-9)) * 15
-    
     return final_res
 
 def plot_radar(row):
@@ -162,39 +149,47 @@ def find_evidence(in_r, ga_r, zn_r, sn_r, temp):
 def ask_gemini(api_key, evidence, u):
     try:
         genai.configure(api_key=api_key)
-        m = genai.GenerativeModel("models/gemini-2.5-flash")
+        # 2.5 Flash 모델 사용
+        g_model = genai.GenerativeModel("models/gemini-2.5-flash")
         prompt = f"""
         당신은 반도체 분야에서 최고로 권위가 있는 연구원입니다.
         [근거 논문]: {evidence['Paper_ID']} (Mechanism: {evidence['Mechanism']})
         [제안 조건]: In:{u['In']:.2f}, Ga:{u['Ga']:.2f}, Sn:{u['Sn']:.2f}, Temp:{u['Temp']}C, Thickness:{u['Thick']}nm
         
-        1. 이 제안이 고성능/고신뢰성을 만족하는 이유를 논리적으로 설명하세요.
+        1. 이 제안이 고성능(이동도)과 고신뢰성(안정성)을 모두 만족하는 이유를 논리적으로 설명하세요.
         2. 특히 사용자가 설정한 두께({u['Thick']}nm)와 온도({u['Temp']}C)가 Flexible AMOLED 공정에 적합한지 구체적으로 평가하세요.
         """
-        return m.generate_content(prompt).text
+        return g_model.generate_content(prompt).text
     except Exception as e: return f"Error: {e}"
 
 # ---------------------------------------------------------
-# [2] UI 구성
+# [2] UI 구성 (Secrets 연동 부분 수정됨)
 # ---------------------------------------------------------
 st.title("🧬 AI Co-Scientist: Deep Optimization")
 st.markdown("#### Evidence-Based Candidate Discovery (Powered by Genetic Algorithm)")
 
 with st.sidebar:
     st.header("⚙️ Settings")
-    api_key = st.text_input("Gemini API Key", type="password")
+    
+    # [핵심 수정] Secrets에서 먼저 키를 찾고, 없으면 입력창 표시
+    if "GEMINI_API_KEY" in st.secrets:
+        api_key = st.secrets["GEMINI_API_KEY"]
+        st.success("✅ API Key Loaded from Server")
+    else:
+        api_key = st.text_input("Gemini API Key", type="password")
+        st.caption("배포 환경에서는 Secrets가 자동 로드됩니다.")
     
     st.markdown("---")
     st.markdown("**1. Process Constraints**")
     min_temp, max_temp = st.slider("Temp Range (°C)", 100, 500, (200, 350))
-    
-    # 두께 슬라이더 (대회 요구사항 B 충족)
     thickness = st.slider("Active Layer Thickness (nm)", 10, 100, 50)
     
     st.markdown("**2. Target Performance**")
     target_mob = st.number_input("Target Mobility (>)", 30.0)
 
-if model is None: st.error("데이터 로드 실패."); st.stop()
+if model is None:
+    st.error("데이터 로드 실패. GitHub에 '03_Model_Input'과 '04_Trained_Model' 폴더가 있는지 확인하세요.")
+    st.stop()
 
 tab1, tab2 = st.tabs(["🚀 Evolutionary Search", "🔬 Researcher's Lab"])
 
@@ -220,7 +215,7 @@ with tab1:
                     fig = px.scatter_ternary(res.head(300), a="In", b="Ga", c="Sn", color="Mobility", size="PlotSize", color_continuous_scale="Viridis")
                     st.plotly_chart(fig, use_container_width=True)
 
-# === Tab 2: 연구자 모드 (불확실성 추가) ===
+# === Tab 2: 연구자 모드 ===
 with tab2:
     c1, c2 = st.columns([1,1])
     with c1:
@@ -230,7 +225,7 @@ with tab2:
         rem = max(0, 1.0-in_r-sn_r); ga_r = rem*0.3; zn_r = rem*0.7
         st.info(f"Auto-Calc: Ga {ga_r:.2f} / Zn {zn_r:.2f}")
         
-        # 불확실성 예측 실행
+        # 불확실성 예측
         X = sx.transform([[in_r, ga_r, zn_r, sn_r, temp]])
         mu, sigma = predict_with_uncertainty(torch.tensor(X, dtype=torch.float32))
         
@@ -239,7 +234,6 @@ with tab2:
         final_mob = mu[0,0] * thick_factor
         final_stab = mu[0,1]
         
-        # 불확실성(±) 표기
         st.metric("Predicted Mobility", f"{final_mob:.1f} ± {sigma[0,0]:.1f}")
         st.metric("Predicted Stability", f"{final_stab:.2f} ± {sigma[0,1]:.2f}")
         
