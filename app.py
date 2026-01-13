@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import google.generativeai as genai
 
 # ---------------------------------------------------------
-# [설정] 페이지 스타일
+# [설정] 페이지 스타일 & 세션 상태 초기화
 # ---------------------------------------------------------
 st.set_page_config(page_title="AI Co-Scientist: Deep Optimization", page_icon="🧬", layout="wide")
 st.markdown("""
@@ -18,8 +18,14 @@ st.markdown("""
     .stApp { background-color: #0E1117; color: #FAFAFA; }
     .gemini-box { background-color: #1E1E1E; padding: 20px; border-left: 5px solid #8e44ad; border-radius: 10px; margin-top:10px;}
     .metric-box { background-color: #262730; padding: 15px; border-radius: 8px; text-align: center; border: 1px solid #444; }
+    div[data-testid="stExpander"] details summary > div > span { font-size: 1.1em; font-weight: bold; color: #00CC96; }
 </style>
 """, unsafe_allow_html=True)
+
+# [편의 기능] 슬라이더 값 제어를 위한 세션 상태 초기화
+if 'in_val' not in st.session_state: st.session_state.in_val = 0.4
+if 'sn_val' not in st.session_state: st.session_state.sn_val = 0.1
+if 'temp_val' not in st.session_state: st.session_state.temp_val = 300
 
 # ---------------------------------------------------------
 # [0] 리소스 로딩
@@ -37,14 +43,11 @@ class ExpertAI(nn.Module):
 
 @st.cache_resource
 def load_system():
-    # 배포 환경과 로컬 환경 경로 호환성 확보
     base = os.getcwd()
     model_path = os.path.join(base, '04_Trained_Model', 'real_model.pth')
     db_path = os.path.join(base, '03_Model_Input', 'real_paper_db.csv')
     
-    # 파일이 없으면 None 반환
-    if not os.path.exists(model_path) or not os.path.exists(db_path): 
-        return None, None, None, None
+    if not os.path.exists(model_path) or not os.path.exists(db_path): return None, None, None, None
     
     model = ExpertAI()
     model.load_state_dict(torch.load(model_path, map_location='cpu'))
@@ -58,7 +61,7 @@ def load_system():
 model, sx, sy, df_db = load_system()
 
 # ---------------------------------------------------------
-# [1] 핵심 기능 함수들
+# [1] 핵심 기능 함수
 # ---------------------------------------------------------
 def predict_with_uncertainty(X_tensor, n_iter=20):
     preds = []
@@ -73,7 +76,6 @@ def predict_with_uncertainty(X_tensor, n_iter=20):
     final_mean = sy.inverse_transform(mean_pred)
     scale_factor = sy.data_max_ - sy.data_min_
     final_std = std_pred * scale_factor
-    
     return final_mean, final_std
 
 def run_genetic_algorithm(min_temp, max_temp, thickness):
@@ -85,7 +87,6 @@ def run_genetic_algorithm(min_temp, max_temp, thickness):
         pop.append(list(r) + [t])
     
     df_pop = pd.DataFrame(pop, columns=['In','Ga','Zn','Sn','Temp'])
-    
     thick_factor_mob = np.log10(thickness + 10) / np.log10(60) 
     thick_factor_stab = 1.0 
     
@@ -102,7 +103,6 @@ def run_genetic_algorithm(min_temp, max_temp, thickness):
         
         top = df_pop.sort_values('Score', ascending=False).head(int(pop_size*0.2))
         new_pop = top.values[:,:5].tolist()
-        
         while len(new_pop) < pop_size:
             p = top.sample(2).values[:,:5]
             child = (p[0] + p[1]) / 2
@@ -112,7 +112,7 @@ def run_genetic_algorithm(min_temp, max_temp, thickness):
             new_pop.append(child)
         df_pop = pd.DataFrame(new_pop, columns=['In','Ga','Zn','Sn','Temp'])
     
-    # 점수 재계산
+    # 최종 계산
     X_final = sx.transform(df_pop.values)
     model.eval()
     with torch.no_grad():
@@ -149,7 +149,6 @@ def find_evidence(in_r, ga_r, zn_r, sn_r, temp):
 def ask_gemini(api_key, evidence, u):
     try:
         genai.configure(api_key=api_key)
-        # 2.5 Flash 모델 사용
         g_model = genai.GenerativeModel("models/gemini-2.5-flash")
         prompt = f"""
         당신은 반도체 분야에서 최고로 권위가 있는 연구원입니다.
@@ -163,7 +162,7 @@ def ask_gemini(api_key, evidence, u):
     except Exception as e: return f"Error: {e}"
 
 # ---------------------------------------------------------
-# [2] UI 구성 (Secrets 연동 부분 수정됨)
+# [2] UI 구성
 # ---------------------------------------------------------
 st.title("🧬 AI Co-Scientist: Deep Optimization")
 st.markdown("#### Evidence-Based Candidate Discovery (Powered by Genetic Algorithm)")
@@ -171,38 +170,66 @@ st.markdown("#### Evidence-Based Candidate Discovery (Powered by Genetic Algorit
 with st.sidebar:
     st.header("⚙️ Settings")
     
-    # [핵심 수정] Secrets에서 먼저 키를 찾고, 없으면 입력창 표시
+    # API 키 처리
     if "GEMINI_API_KEY" in st.secrets:
         api_key = st.secrets["GEMINI_API_KEY"]
         st.success("✅ API Key Loaded from Server")
     else:
         api_key = st.text_input("Gemini API Key", type="password")
-        st.caption("배포 환경에서는 Secrets가 자동 로드됩니다.")
     
     st.markdown("---")
+    st.markdown("### 🧪 Quick Presets")
+    # [편의 기능 1] 추천 레시피 프리셋 버튼 (연구자 모드용)
+    col_p1, col_p2 = st.columns(2)
+    if col_p1.button("Standard IGZO"):
+        st.session_state.in_val = 0.33
+        st.session_state.sn_val = 0.0
+        st.session_state.temp_val = 350
+        st.toast("✅ Loaded: Standard IGZO Recipe")
+        
+    if col_p2.button("High-Mobility"):
+        st.session_state.in_val = 0.60
+        st.session_state.sn_val = 0.10
+        st.session_state.temp_val = 300
+        st.toast("✅ Loaded: In-Rich High Mobility Recipe")
+
+    st.markdown("---")
     st.markdown("**1. Process Constraints**")
-    min_temp, max_temp = st.slider("Temp Range (°C)", 100, 500, (200, 350))
-    thickness = st.slider("Active Layer Thickness (nm)", 10, 100, 50)
+    # [편의 기능 3] 툴팁 추가
+    min_temp, max_temp = st.slider("Temp Range (°C)", 100, 500, (200, 350), help="유전 알고리즘이 탐색할 열처리 온도 범위입니다.")
+    thickness = st.slider("Active Layer Thickness (nm)", 10, 100, 50, help="박막 트랜지스터의 활성층 두께입니다. 물리적 보정에 사용됩니다.")
     
     st.markdown("**2. Target Performance**")
-    target_mob = st.number_input("Target Mobility (>)", 30.0)
+    target_mob = st.number_input("Target Mobility (>)", 30.0, help="탐색 목표로 하는 최소 전자 이동도입니다.")
 
 if model is None:
-    st.error("데이터 로드 실패. GitHub에 '03_Model_Input'과 '04_Trained_Model' 폴더가 있는지 확인하세요.")
+    st.error("데이터 로드 실패. GitHub 파일 확인 요망.")
     st.stop()
 
 tab1, tab2 = st.tabs(["🚀 Evolutionary Search", "🔬 Researcher's Lab"])
 
 # === Tab 1: 유전 알고리즘 ===
 with tab1:
+    st.info("💡 **Tip:** 유전 알고리즘을 실행하여 수천 개의 후보 중 최적의 레시피를 도출하고, **결과를 CSV로 다운로드**하세요.")
+    
     if st.button("🚀 Run Genetic Algorithm", type="primary"):
-        with st.spinner("Evolving candidates with Physics-aware logic..."):
+        with st.spinner("AI Evolving candidates (Physics-aware logic)..."):
             res = run_genetic_algorithm(min_temp, max_temp, thickness)
             top3 = res[res['Mobility'] > target_mob].head(3)
             
             if top3.empty: st.warning("조건 만족 후보 없음.")
             else:
                 st.success(f"✅ Optimization Complete! (Physics Adjusted for {thickness}nm)")
+                
+                # [편의 기능 2] 결과 다운로드 버튼
+                csv = top3.to_csv(index=False).encode('utf-8')
+                st.download_button(
+                    label="💾 Download Top 3 Candidates (CSV)",
+                    data=csv,
+                    file_name='ai_tft_candidates.csv',
+                    mime='text/csv',
+                )
+                
                 c1, c2 = st.columns([1.2, 1])
                 with c1:
                     for i in range(len(top3)):
@@ -217,19 +244,24 @@ with tab1:
 
 # === Tab 2: 연구자 모드 ===
 with tab2:
+    st.write("개별 레시피를 검증하고 **Gemini**에게 심층 분석을 의뢰합니다.")
+    
     c1, c2 = st.columns([1,1])
     with c1:
-        in_r = st.slider("In",0.0,1.0,0.4); sn_r = st.slider("Sn",0.0,1.0,0.1)
-        temp = st.slider("Temp",100,500,300)
+        # [편의 기능 1 연동] 세션 상태와 연동된 슬라이더
+        in_r = st.slider("In Ratio", 0.0, 1.0, key="in_val", help="Indium 비율이 높으면 이동도가 증가하는 경향이 있습니다.")
+        sn_r = st.slider("Sn Ratio", 0.0, 1.0, key="sn_val", help="Tin(Sn) 첨가는 화학적 내구성과 전도성을 조절합니다.")
+        temp = st.slider("Temp (°C)", 100, 500, key="temp_val", help="공정 온도는 결정화도와 결함 밀도에 영향을 줍니다.")
+        
     with c2:
-        rem = max(0, 1.0-in_r-sn_r); ga_r = rem*0.3; zn_r = rem*0.7
+        rem = max(0, 1.0 - in_r - sn_r)
+        ga_r = rem * 0.3; zn_r = rem * 0.7
         st.info(f"Auto-Calc: Ga {ga_r:.2f} / Zn {zn_r:.2f}")
         
         # 불확실성 예측
         X = sx.transform([[in_r, ga_r, zn_r, sn_r, temp]])
         mu, sigma = predict_with_uncertainty(torch.tensor(X, dtype=torch.float32))
         
-        # 두께 보정
         thick_factor = np.log10(thickness + 10) / np.log10(60)
         final_mob = mu[0,0] * thick_factor
         final_stab = mu[0,1]
