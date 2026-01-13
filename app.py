@@ -151,7 +151,7 @@ def ask_gemini(api_key, evidence, u):
         genai.configure(api_key=api_key)
         g_model = genai.GenerativeModel("models/gemini-2.5-flash")
         prompt = f"""
-        당신은 반도체 분야에서 최고로 권위가 있는 연구원입니다.
+        당신은 삼성전자 반도체 수석 연구원입니다.
         [근거 논문]: {evidence['Paper_ID']} (Mechanism: {evidence['Mechanism']})
         [제안 조건]: In:{u['In']:.2f}, Ga:{u['Ga']:.2f}, Sn:{u['Sn']:.2f}, Temp:{u['Temp']}C, Thickness:{u['Thick']}nm
         
@@ -179,7 +179,7 @@ with st.sidebar:
     
     st.markdown("---")
     st.markdown("### 🧪 Quick Presets")
-    # [편의 기능 1] 추천 레시피 프리셋 버튼 (연구자 모드용)
+    # 추천 레시피 프리셋 버튼
     col_p1, col_p2 = st.columns(2)
     if col_p1.button("Standard IGZO"):
         st.session_state.in_val = 0.33
@@ -195,7 +195,7 @@ with st.sidebar:
 
     st.markdown("---")
     st.markdown("**1. Process Constraints**")
-    # [편의 기능 3] 툴팁 추가
+    # 툴팁 추가
     min_temp, max_temp = st.slider("Temp Range (°C)", 100, 500, (200, 350), help="유전 알고리즘이 탐색할 열처리 온도 범위입니다.")
     thickness = st.slider("Active Layer Thickness (nm)", 10, 100, 50, help="박막 트랜지스터의 활성층 두께입니다. 물리적 보정에 사용됩니다.")
     
@@ -221,7 +221,7 @@ with tab1:
             else:
                 st.success(f"✅ Optimization Complete! (Physics Adjusted for {thickness}nm)")
                 
-                # [편의 기능 2] 결과 다운로드 버튼
+                # 결과 다운로드 버튼
                 csv = top3.to_csv(index=False).encode('utf-8')
                 st.download_button(
                     label="💾 Download Top 3 Candidates (CSV)",
@@ -235,7 +235,8 @@ with tab1:
                     for i in range(len(top3)):
                         row = top3.iloc[i]
                         with st.expander(f"🥇 Rank {i+1}: In-rich IGZTO (Mob: {row['Mobility']:.1f})", expanded=(i==0)):
-                            st.plotly_chart(plot_radar(row), use_container_width=True)
+                            # [핵심 수정] 반복문 안에서 차트 그릴 때 고유 key 할당
+                            st.plotly_chart(plot_radar(row), use_container_width=True, key=f"radar_{i}")
                             st.caption(f"In {row['In']:.2f} : Sn {row['Sn']:.2f} @ {row['Temp']:.0f}°C, {thickness}nm")
                 with c2:
                     st.subheader("🌌 Search Space")
@@ -248,7 +249,7 @@ with tab2:
     
     c1, c2 = st.columns([1,1])
     with c1:
-        # [편의 기능 1 연동] 세션 상태와 연동된 슬라이더
+        # 세션 상태와 연동된 슬라이더
         in_r = st.slider("In Ratio", 0.0, 1.0, key="in_val", help="Indium 비율이 높으면 이동도가 증가하는 경향이 있습니다.")
         sn_r = st.slider("Sn Ratio", 0.0, 1.0, key="sn_val", help="Tin(Sn) 첨가는 화학적 내구성과 전도성을 조절합니다.")
         temp = st.slider("Temp (°C)", 100, 500, key="temp_val", help="공정 온도는 결정화도와 결함 밀도에 영향을 줍니다.")
